@@ -114,6 +114,13 @@ await SipNative.endCall();
 await SipNative.disconnectSip();
 ```
 
+### Optional
+when you encounter a Manifest merger failed error try the following.
+open you androidnManifest.xml
+    a. add tools namespace in manifest tag 
+        ``` manifest xmlns:android="http://schemas.android.com/apk/res/android" package="app.package.name"  xmlns:tools="http://schemas.android.com/tools>``` 
+    b. add 'tools:replace="android:name"' to <application> element
+
 This project is a starting point for a Flutter
 [plug-in package](https://flutter.dev/developing-packages/),
 a specialized package that includes platform-specific implementation code for
